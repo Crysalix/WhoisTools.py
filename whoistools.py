@@ -2,7 +2,9 @@
 
 import ip2whois
 
-ip2whois_init = ip2whois.Api('THISISNOTMYAPIKEYLOL')
+import config as cfg
+
+ip2whois_init = ip2whois.Api(cfg.apikey)
 
 # Lookup domain information
 results = ip2whois_init.lookup('timestamp.ovh')
